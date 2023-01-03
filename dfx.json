@@ -1,0 +1,28 @@
+{
+  "canisters": {
+    "hello": {
+      "main": "backend/service/Hello.mo",
+      "type": "motoko"
+    },
+    "frontend": {
+      "dependencies": [
+        "hello"
+      ],
+      "build": "npm run build",
+      "frontend": {
+        "entrypoint": "src/pages/index.tsx"
+      },
+      "source": [
+        "out"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "version": 1
+}
