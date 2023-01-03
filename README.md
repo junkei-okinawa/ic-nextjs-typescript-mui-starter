@@ -1,44 +1,41 @@
-# Next.js with TypeScript example
+# Internet Computer with Next.js, TypeScript and Material-ui example
 
 ## How to use
 
-Download the example [or clone the repo](https://github.com/mui/material-ui):
-
-<!-- #default-branch-switch -->
-
+Clone repository:
 ```sh
-curl https://codeload.github.com/mui/material-ui/tar.gz/master | tar -xz --strip=2  material-ui-master/examples/nextjs-with-typescript
-cd nextjs-with-typescript
+git clone https://github.com/junkei-okinawa/ic-nextjs-typescript-mui-starter.git
+cd ic-nextjs-typescript-mui-starter
 ```
 
-Install it and run:
-
+### Installation
+Run the following command to install dfx 0.12.1:
 ```sh
-npm install
-npm run dev
+DFX_VERSION=0.12.1 sh -ci "$(curl -fsSL https://sdk.dfinity.org/install.sh)"
 ```
 
-or:
+Install modules:
+```sh
+yarn install # or npm install
+```
 
-<!-- #default-branch-switch -->
+### Deployment
+#### Local Deployment
+Start up an IC replica and deploy:
+```sh
+# Open a terminal and navigate to your project's root directory, then run the following command to start a local IC replica
+dfx start --clean
 
-[![Edit on StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/mui/material-ui/tree/master/examples/nextjs-with-typescript)
+# open another terminal and run these commands from the root directory of your project
+dfx deploy
+```
 
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/mui/material-ui/tree/master/examples/nextjs-with-typescript)
-
-## The idea behind the example
-
-The project uses [Next.js](https://github.com/vercel/next.js), which is a framework for server-rendered React apps.
-It includes `@mui/material` and its peer dependencies, including `emotion`, the default style engine in MUI v5. If you prefer, you can [use styled-components instead](https://mui.com/material-ui/guides/interoperability/#styled-components).
-
-## The link component
-
-The [example folder](https://github.com/mui/material-ui/tree/HEAD/examples/nextjs-with-typescript) provides an adapter for the use of [Next.js's Link component](https://nextjs.org/docs/api-reference/next/link) with MUI.
-More information [in the documentation](https://mui.com/material-ui/guides/routing/#next-js).
-
-## What's next?
-
-<!-- #default-branch-switch -->
-
-You now have a working example project.
-You can head back to the documentation, continuing browsing it from the [templates](https://mui.com/material-ui/getting-started/templates/) section.
+The following output will be displayed, so connect to the frontend URL
+```sh
+Deployed canisters.
+URLs:
+  Frontend canister via browser
+    frontend: http://127.0.0.1:4943/?canisterId=rrkah-fqaaa-aaaaa-aaaaq-cai
+  Backend canister via Candid interface:
+    hello: http://127.0.0.1:4943/?canisterId=r7inp-6aaaa-aaaaa-aaabq-cai&id=ryjl3-tyaaa-aaaaa-aaaba-cai
+```
