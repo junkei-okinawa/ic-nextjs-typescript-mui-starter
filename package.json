@@ -10,13 +10,12 @@
     "Canister"
   ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start",
+    "dev": "dfx generate && next dev",
+    "build": "dfx generate && next build && next export",
+    "start": "dfx generate && next start",
     "lint": "next lint --dir src",
     "lint:fix": "yarn lint --fix",
-    "export": "next export",
-    "sync:hello": "DFX_NETWORK=local && rsync -avr .dfx/$(echo ${DFX_NETWORK:-'**'})/canisters/hello --exclude='idl/' --exclude='*.wasm' --delete ui/declarations",
+    "export": "dfx generate && next export",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   },
   "dependencies": {

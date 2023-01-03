@@ -24,7 +24,7 @@ export default function Home() {
         <Link href="/about" color="secondary">
           Go to the about page
         </Link>
-        <Link href="/about" color="secondary">
+        <Link href="/hello" color="secondary">
           Go to the hello page
         </Link>
         <ProTip />
