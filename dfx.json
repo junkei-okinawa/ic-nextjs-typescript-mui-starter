@@ -9,9 +9,6 @@
         "hello"
       ],
       "build": "npm run build",
-      "frontend": {
-        "entrypoint": "src/pages/index.tsx"
-      },
       "source": [
         "out"
       ],

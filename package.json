@@ -10,12 +10,12 @@
     "Canister"
   ],
   "scripts": {
-    "dev": "dfx generate && next dev",
-    "build": "dfx generate && next build && next export",
-    "start": "dfx generate && next start",
+    "dev": "bash dfx.frontend_build.sh && next dev",
+    "build": "bash dfx.frontend_build.sh && next build && next export",
+    "start": "bash dfx.frontend_build.sh && next start",
     "lint": "next lint --dir src",
     "lint:fix": "yarn lint --fix",
-    "export": "dfx generate && next export",
+    "export": "bash dfx.frontend_build.sh && next export",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   },
   "dependencies": {
