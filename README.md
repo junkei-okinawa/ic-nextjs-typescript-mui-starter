@@ -39,3 +39,8 @@ URLs:
   Backend canister via Candid interface:
     hello: http://127.0.0.1:4943/?canisterId=r7inp-6aaaa-aaaaa-aaabq-cai&id=ryjl3-tyaaa-aaaaa-aaaba-cai
 ```
+
+frontend app server start
+```sh
+yarn run dev # or npm run dev
+```
